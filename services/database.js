@@ -1,5 +1,5 @@
 import MongoDB, { ObjectId } from 'mongodb'
-const cliente = new MongoDB.MongoClient('mongodb://localhost:27017')
+const cliente = new MongoDB.MongoClient('mongodb+srv://siayudoinfo:Siayudo123-!@cluster0.ikpthku.mongodb.net/tesis')
 
 async function database(callback) {
     await cliente.connect()
