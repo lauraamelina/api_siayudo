@@ -3,11 +3,19 @@ import multerS3 from 'multer-s3'
 import aws from 'aws-sdk'
 const s3 = new aws.S3();
 
+//configuramos aws sdk para subir archivos a s3
+
+aws.config.update({
+    accessKeyId: 'AKIA6LWUN6E7JHYCIUXB',
+    secretAccessKey: '86CcIyfvF03V6J9Ezg33RW96qR9biJvF4uXbyd',
+    region: 'us-east-1'
+});
+
 //configuramos multer s3
 const uploadFile = multer({
     storage: multerS3({
         s3: s3,
-        bucket: 'bucket-name',
+        bucket: 'siayudo',
         acl: 'public-read',
         metadata: function (req, file, cb) {
             cb(null, { fieldName: file.fieldname });
@@ -16,13 +24,7 @@ const uploadFile = multer({
 }).single('image')
 
 
-//configuramos aws sdk para subir archivos a s3
 
-aws.config.update({
-    accessKeyId: 'AKIA6LWUN6E7JHYCIUXB',
-    secretAccessKey: '86CcIyfvF03V6J9Ezg33RW96qR9biJvF4uXbyd',
-    region: 'us-east-1'
-});
 
 // function uploadFile(){
 //     const storage = diskStorage({
