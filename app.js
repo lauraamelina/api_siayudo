@@ -16,8 +16,6 @@ app.use(cors())
 app.use(express.json())
 app.set('port', process.env.PORT || 8080)
 
-const S3_BUCKET = process.env.S3_BUCKET;
-
 app.use(bodyParser.urlencoded({extended: true, limit: '500mb', parameterLimit: 1000000}))
 
 app.use('/', PostRoute)
