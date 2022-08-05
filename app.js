@@ -8,12 +8,17 @@ import cors from 'cors'
 import {createServer} from 'http'
 import * as socketIo from 'socket.io'
 import bodyParser from 'body-parser'
+import aws from 'aws-sdk'
+const s3 = new aws.S3();
+console.log(s3)
 
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 app.set('port', process.env.PORT || 8080)
+
+const S3_BUCKET = process.env.S3_BUCKET;
 
 app.use(bodyParser.urlencoded({extended: true, limit: '500mb', parameterLimit: 1000000}))
 

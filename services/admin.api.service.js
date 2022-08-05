@@ -87,7 +87,7 @@ async function rejectUser(email) {
     service: 'gmail',
     auth: {
         user: 'siayudoinfo@gmail.com',
-        pass: 'bfersgfwhqhbqyqw',
+        pass: 'mojkfayyclcwcywq',
     }
   });
 
@@ -124,7 +124,7 @@ async function acceptUser(email) {
     service: 'gmail',
     auth: {
         user: 'siayudoinfo@gmail.com',
-        pass: 'bfersgfwhqhbqyqw',
+        pass: 'mojkfayyclcwcywq',
     }
   });
 

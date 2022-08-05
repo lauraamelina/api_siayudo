@@ -36,7 +36,7 @@ async function sendEmail(from, to) {
     service: 'gmail',
     auth: {
         user: 'siayudoinfo@gmail.com',
-        pass: 'bfersgfwhqhbqyqw',
+        pass: 'mojkfayyclcwcywq',
     }
   });
 
