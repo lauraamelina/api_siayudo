@@ -50,5 +50,5 @@ serverSocket.on('connection', (socket) => {
 
 
 server.listen(app.get('port') , function () {
-  console.log('Abrir http://localhost:8080')
+  console.log('Servidor corriendo')
 })
